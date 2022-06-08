@@ -15,7 +15,7 @@
     <div class="wrapper">
         <div class="content-wrapper">
             <section class="content">
-                <div class="container-fluid">
+                <div class="container-fluid mt-3">
 
                     <div>
                         <nav class="navbar navbar-warning bg-warning">
