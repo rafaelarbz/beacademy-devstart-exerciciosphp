@@ -2,11 +2,11 @@
 include 'acoes.php';
 include 'style/bootstrap.html';
 
-$url = $_SERVER['REQUEST_URI'];
+$url = explode('?' , $_SERVER['REQUEST_URI']);
 
 include 'telas/menu.php';
 
-switch($url){
+switch($url[0]){
     case '/' :
         pageHome();
         break;
@@ -19,9 +19,17 @@ switch($url){
     case '/lista' :
         pageList();
         break;
+    case '/excluir' :
+        deleteCadastro();
+        break;
+    case '/editar' :
+        editCadastro();
+        break;
     default :
         pageError();
 }
 
 
+
+include 'telas/footer.php';
 ?>
