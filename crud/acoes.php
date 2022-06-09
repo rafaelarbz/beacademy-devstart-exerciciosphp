@@ -9,11 +9,22 @@ function pageLogin() {
 }
 
 function pageCadastro() {
+
+    if($_POST){
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $telefone = $_POST['telefone'];
+
+        $arquivo = fopen('dados/contatos.csv', 'a+');
+        fwrite($arquivo, "{$nome};{$email};{$telefone}".PHP_EOL);
+        echo "Cadastro realizado com sucesso!";
+    }     
+
     include 'telas/cadastro.php';
 }
 
 function pageList() {
-    $alunos = file('dados/alunos.csv');
+    $alunos = file('crud/dados/alunos.csv');
     
     include 'telas/lista.php';
 }

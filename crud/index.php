@@ -1,5 +1,6 @@
 <?php
 include 'acoes.php';
+include 'style/bootstrap.html';
 
 $url = $_SERVER['REQUEST_URI'];
 
